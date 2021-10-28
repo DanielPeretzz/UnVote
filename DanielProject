@@ -1,0 +1,42 @@
+import java.util.Scanner;
+
+public class HomeWork {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int SumFor = 0;
+        int SumAgainst = 0;
+        int SumAbstain = 0;
+        int SumVeto = 0;
+        for(int i = 1 ; i < 10 ; i++){
+            System.out.print("Please enter your vote (for, against, abstain, veto): ");
+            String Vote = scanner.next();
+            if (Vote.equals("veto")) {
+                System.out.println(i + " Dropped Veto!!!");
+                SumVeto++;
+                break;
+            }
+
+            else if (Vote.equals("for")) {
+                    System.out.println("Thanks for your vote");
+                    SumFor++;
+
+                }
+            else if (Vote.equals("against")) {
+                    System.out.println("Thanks for your vote");
+                    SumAgainst++;
+
+                }
+            else if (Vote.equals("abstain")) {
+                    System.out.println("Thanks for your vote");
+                    SumAbstain++;
+                }
+            else {
+                    System.out.println("Please enter only a vote word");
+            }
+        }
+        System.out.println(SumFor + " Vote for");
+        System.out.println(SumAgainst + " Vote Against");
+        System.out.println(SumAbstain + " Vote Abstain");
+        System.out.println(SumVeto + " Vote Veto");
+    }
+}
